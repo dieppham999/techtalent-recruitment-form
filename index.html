@@ -8,18 +8,50 @@
     <header>
         <h1>Đăng ký ứng tuyển TechTalent</h1>
     </header>
-    <div class="form-dang-ky">
-        
-        Họ và tên: <input type="text" placeholder="Nhập tên"> <br>
-        Mật khẩu hệ thống: <input type="text" placeholder="Tạo mật khẩu"> <br>
-        Email liên hệ: <input type="text" placeholder="Nhập email"> <br>
-        Giới tính:
-        Nam <input type="checkbox">
-        Nữ <input type="checkbox"> <br>
-        Ngày sinh (dd/mm/yyyy): <input type="text"> <br>
-        Vị trí ứng tuyển: <input type="text"> <br>
-        Nộp CV (Định dạng PDF): <input type="text" placeholder="Dán link hoặc đường dẫn file"> <br>
-        <button>Gửi Hồ Sơ</button>
-    </div>
+
+    <main>
+        <form action="https://bold-tiger-59.webhook.cool" method="POST">
+            <fieldset>
+                <legend>Thông tin cá nhân</legend>
+                <label for="fullname">Họ và tên:</label><br>
+                <input type="text" placeholder="Nhập tên" id="fullname" required><br>
+
+                <label for="password">Mật khẩu hệ thống:</label><br>
+                <input type="password" placeholder="Tạo mật khẩu" id="password" required><br>
+
+                <label for="email">Email liên hệ:</label><br>
+                <input type="email" placeholder="Tạo mật khẩu" id="email" required><br>
+
+                <label>Giới tính:</label>
+                
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Nam</label>
+
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Nữ</label><br>
+
+                <label for="birthday">Ngày sinh (dd/mm/yyyy):</label><br>
+                <input type="date" name="birthday" id="birthday" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Thông tin chuyên môn</legend>
+
+                <label for="position">Vị trí ứng tuyển:</label><br>
+                <select name="position" id="position">
+                    <option value="">-- Chọn vị trí --</option>
+                    <option value="frontend">Frontend Developer</option>
+                    <option value="backend">Backend Developer</option>
+                    <option value="fullstack">Fullstack Developer</option>
+                    <option value="devops">DevOps Engineer</option>
+                </select><br>
+                
+                <label for="cv">Nộp CV (Định dạng PDF):</label><br>
+                <input type="file" placeholder="Nhập tên" id="fullname" accept=".pdf,application/pdf" required><br>
+                
+                <input type="submit" value="Gửi Hồ Sơ">
+            </fieldset>
+        </form>
+    </main>
 </body>
 </html>
