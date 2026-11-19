@@ -49,18 +49,18 @@ techtalent-recruitment-form/
 
 ## 6. Checklist kiểm thử và nghiệm thu
 
-- [ ] Bỏ trống trường bắt buộc và submit: trình duyệt chặn gửi.
-- [ ] Nhập email thiếu `@`: trình duyệt báo định dạng không hợp lệ.
-- [ ] Mật khẩu hiển thị dạng ký tự được che.
-- [ ] Hai radio giới tính không thể cùng được chọn.
-- [ ] Có bộ chọn ngày sinh.
-- [ ] Vị trí ứng tuyển là dropdown.
-- [ ] Trường CV mở hộp thoại chọn file có bộ lọc PDF (cần xác thực file ở server khi triển khai).
-- [ ] Bấm nhãn của từng trường để kiểm tra khả năng focus/chọn input.
-- [ ] Có đủ `name`, `id`, `required` ở các trường tương ứng.
-- [ ] Có hai nhóm `fieldset` kèm `legend` đúng mục đích.
-- [ ] Ghi nhận kết quả test thực tế trong `test_report.txt`.
-- [ ] Ghi lại prompt đã thực sự hỏi AI vào `ai_prompt_log.md`, không tạo lịch sử giả.
+- [x] Bỏ trống trường bắt buộc và submit: trình duyệt chặn gửi.
+- [x] Nhập email thiếu `@`: trình duyệt báo định dạng không hợp lệ.
+- [x] Mật khẩu hiển thị dạng ký tự được che.
+- [x] Hai radio giới tính không thể cùng được chọn.
+- [x] Có bộ chọn ngày sinh.
+- [x] Vị trí ứng tuyển là dropdown.
+- [x] Trường CV mở hộp thoại chọn file có bộ lọc PDF (cần xác thực file ở server khi triển khai).
+- [x] Bấm nhãn của từng trường để kiểm tra khả năng focus/chọn input.
+- [x] Có đủ `name`, `id`, `required` ở các trường tương ứng.
+- [x] Có hai nhóm `fieldset` kèm `legend` đúng mục đích.
+- [x] Ghi nhận kết quả test thực tế trong `test_report.txt`.
+- [x] Ghi lại prompt đã thực sự hỏi AI vào `ai_prompt_log.md`, không tạo lịch sử giả.
 
 ## 7. Câu hỏi vấn đáp cần chuẩn bị
 
