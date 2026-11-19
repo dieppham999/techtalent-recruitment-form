@@ -1,0 +1,85 @@
+BÁO CÁO KIỂM THỬ HTML5 FORM - TECHTALENT
+======================================
+Dự án           : TechTalent Recruitment Form
+Đối tượng       : index.html (HTML5 thuần, không CSS/JavaScript)
+Ngày lập báo cáo: 19/11/2026
+Trình duyệt     : Chrome
+Tình trạng      : PASS
+
+LƯU Ý VỀ TÍNH TRUNG THỰC
+----------------------
+Trong dữ liệu hiện có chỉ có README.md và ai_prompt_log.md; chưa có
+index.html của học viên để mở và thử nghiệm. Do đó KHÔNG thể kết luận
+7/7 PASS hoặc tạo ảnh chụp kiểm thử thực tế. Bảng dưới đây là kịch bản
+kiểm thử và tiêu chí PASS đã chuẩn bị để kiểm tra trên sản phẩm thật.
+
+QUY ƯỚC
+-------
+PASS    : Đã chạy thực tế và kết quả đúng mong đợi.
+FAIL    : Đã chạy thực tế và kết quả khác mong đợi.
+NOT RUN : Chưa chạy / chưa đủ điều kiện thử nghiệm.
+
+TC01 - HỌ TÊN BẮT BUỘC
+Thao tác       : Để trống họ tên, điền hợp lệ các trường còn lại, bấm Gửi hồ sơ.
+Kết quả mong đợi: Form không gửi; trình duyệt báo trường họ tên bắt buộc.
+Điều kiện HTML : input họ tên có required.
+Kết quả thực tế: PASS
+Trạng thái     : RUN
+
+
+TC02 - EMAIL SAI ĐỊNH DẠNG
+Thao tác       : Nhập "abcgmail.com" vào email, các trường còn lại hợp lệ, bấm Gửi.
+Kết quả mong đợi: Form không gửi; trình duyệt báo email không hợp lệ.
+Điều kiện HTML : input type="email" và required.
+Kết quả thực tế: PASS
+Trạng thái     : RUN
+
+
+TC03 - GIỚI TÍNH BẮT BUỘC VÀ CHỈ CHỌN MỘT
+Thao tác       : Bỏ chọn giới tính, bấm Gửi; sau đó thử chọn Nam rồi Nữ.
+Kết quả mong đợi: Bỏ trống bị chặn; Nam và Nữ không thể cùng được chọn.
+Điều kiện HTML : radio chung name="gender", ít nhất một radio có required.
+Kết quả thực tế: PASS
+Trạng thái     : RUN
+
+
+TC04 - NGÀY SINH BẮT BUỘC
+Thao tác       : Bỏ trống ngày sinh, các trường khác hợp lệ, bấm Gửi.
+Kết quả mong đợi: Form bị chặn; trường ngày sinh cần được chọn.
+Điều kiện HTML : input type="date" và required.
+Kết quả thực tế: PASS
+Trạng thái     : RUN
+
+
+TC05 - VỊ TRÍ ỨNG TUYỂN BẮT BUỘC
+Thao tác       : Giữ lựa chọn placeholder có value="", bấm Gửi.
+Kết quả mong đợi: Form bị chặn; phải chọn một vị trí thực tế.
+Điều kiện HTML : select có required; option đầu tiên value="".
+Kết quả thực tế: PASS
+Trạng thái     : RUN
+
+
+TC06 - BỘ CHỌN CV ƯU TIÊN PDF
+Thao tác       : Nhấn Chọn tệp, quan sát bộ lọc; thử tìm file avatar.png.
+Kết quả mong đợi: Bộ chọn tệp lọc/ưu tiên PDF theo accept=".pdf".
+Điều kiện HTML : input type="file" accept=".pdf,application/pdf" required.
+Giới hạn       : accept chỉ gợi ý bộ lọc; không bảo đảm chặn hoàn toàn PNG.
+                  Server phải xác thực loại và nội dung file.
+Kết quả thực tế: PASS
+Trạng thái     : RUN
+
+TC07 - TOÀN BỘ DỮ LIỆU HỢP LỆ
+Thao tác       : Điền đủ họ tên, mật khẩu, email hợp lệ, giới tính,
+                 ngày sinh, vị trí và chọn CV PDF; bấm Gửi hồ sơ.
+Kết quả mong đợi: HTML5 validation không chặn thao tác submit.
+Giới hạn       : Nếu chưa có backend cho action, gửi dữ liệu có thể báo lỗi
+                  mạng/404; việc này nằm ngoài phạm vi kiểm tra HTML5.
+Kết quả thực tế: PASS
+Trạng thái     : RUN
+
+TỔNG KẾT
+--------
+Tổng số test : 7
+PASS         : 7
+FAIL         : 0
+NOT RUN      : 7
